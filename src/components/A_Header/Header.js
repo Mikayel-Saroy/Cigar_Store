@@ -1,6 +1,6 @@
 import React from 'react';
 import st from './Header.module.css';
-import shopping_cart from '../../shopping_cart.png';
+import shopping_cart from './shopping_cart.png';
 import {NavLink} from "react-router-dom";
 
 function Header() {

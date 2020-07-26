@@ -1,5 +1,5 @@
 import React from 'react';
-import st from './Accessories.moudle.css';
+import st from './Accessories.module.css';
 
 const Accessories = () => {
     return (
