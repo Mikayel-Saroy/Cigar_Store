@@ -7,7 +7,8 @@ import store from "./redux/state";
 
 let rerenderEntireTree = (data) => {
     ReactDOM.render(<App state={data}
-                         addButton={store.addButton.bind(store)}
+                         plusButton={store.plusButton.bind(store)}
+                         minusButton={store.minusButton.bind(store)}
     />, document.getElementById('root'));
 };
 rerenderEntireTree(store.getState());

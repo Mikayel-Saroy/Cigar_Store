@@ -4,9 +4,12 @@ import minus_sign from './minus_sign.png';
 import plus_sign from './plus_sign.png';
 
 const ShowItems = (props) => {
-    const addFunction = () => {
-        props.addButton(props.location, props.id);
-    }
+    const plusFunction = () => {
+        props.plusButton(props.location, props.id);
+    };
+    const minusFunction = () => {
+        props.minusButton(props.location, props.id);
+    };
 
     return (
         <div>
@@ -24,13 +27,13 @@ const ShowItems = (props) => {
                         <p>${props.price * props.count}</p>
                     </div>
                     <div className={st.select}>
-                        <div className={st.selectMinus}>
+                        <div className={st.selectMinus} onClick={minusFunction}>
                             <img src={minus_sign} alt='IMG'/>
                         </div>
                         <div className={st.selectCount}>
                             <p>{props.count}</p>
                         </div>
-                        <div className={st.selectPlus} onClick={addFunction}>
+                        <div className={st.selectPlus} onClick={plusFunction}>
                             <img src={plus_sign} alt='IMG'/>
                         </div>
                     </div>
