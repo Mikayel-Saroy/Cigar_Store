@@ -1,6 +1,7 @@
 import React from "react";
 import st from './../../X_Generals/GeneralCSS/CigarsIntro.module.css';
 import wallpaper from './Cigarillo_Wallpaper.jpg';
+import {NavLink} from "react-router-dom";
 
 const CigarillosIntro = () => {
     return (
@@ -12,9 +13,13 @@ const CigarillosIntro = () => {
                 Machine made cigars come in all shapes and sizes, none of which will break the bank. This selection of
                 household names are some of the smokes that wrote the book on practicality. Take them on the go, or
                 light one up for a quick puff, whenever you please.</p>
-            <p className={st.secondText}>Go to shopping..</p>
+            <p className={st.secondText}>Go to shopping.</p>
             <div>
-                NavLinks
+                <ul><NavLink to='/cigars/swishersweets'>- Swisher Sweets</NavLink></ul>
+                <ul><NavLink to='/cigars/djarumfiltered'>- Djarum Filtered</NavLink></ul>
+                <ul><NavLink to='/cigars/whiteowl'>- White Ow</NavLink></ul>
+                <ul><NavLink to='/cigars/cheyennefiltered'>- Cheyenne Filtered</NavLink></ul>
+                <ul><NavLink to='/cigars/villiger'>- Villiger</NavLink></ul>
             </div>
         </div>
     );

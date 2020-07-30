@@ -13,7 +13,7 @@ const CigarsIntro = () => {
                 Macanudo, Punch, Hoyo de Monterrey, Avo, and hundreds more. Whether you are a beginner or a seasoned
                 aficionado, there's something for every smoker available. This is the ideal spot to fill your humidor
                 with the finest and indulge in luxury cigar smoking at its best!</p>
-            <p className={st.secondText}>Go to shopping..</p>
+            <p className={st.secondText}>Go to shopping.</p>
             <div>
                 <ul><NavLink to='/cigars/montecristo'>- Montecristo</NavLink></ul>
                 <ul><NavLink to='/cigars/arturofuente'>- Arturo Fuente</NavLink></ul>
