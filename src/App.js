@@ -15,11 +15,13 @@ function App(props) {
                 <div className={st.content}>
                     <Route render={() => <Cigars cigarsData={props.state.cigarsData}
                                                  plusButton={props.plusButton}
-                                                 minusButton={props.minusButton}/>} path='/cigars' />
+                                                 minusButton={props.minusButton}/>} path='/cigars'/>
                     <Route render={() => <Cigarillos cigarillosData={props.state.cigarillosData}
                                                      plusButton={props.plusButton}
-                                                     minusButton={props.minusButton}/>} path='/cigarillos' />
-                    <Route render={() => <Accessories/>} path='/accessories' />
+                                                     minusButton={props.minusButton}/>} path='/cigarillos'/>
+                    <Route render={() => <Accessories accessoriesData={props.state.accessoriesData}
+                                                      plusButton={props.plusButton}
+                                                      minusButton={props.minusButton}/>} path='/accessories'/>
                     <Route render={() => <Cart/>} path='/Cart'/>
                 </div>
             </div>

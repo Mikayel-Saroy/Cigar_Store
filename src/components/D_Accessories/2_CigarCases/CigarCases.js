@@ -2,7 +2,7 @@ import React from 'react';
 import ShowItems from "../../X_Generals/ShowItems/ShowItems";
 
 
-const Montecristo = (props) => {
+const CigarCases = (props) => {
     const renderItems = (data) => data.map(item => <ShowItems id={item.id}
                                                               img={item.img}
                                                               name={item.name}
@@ -11,16 +11,16 @@ const Montecristo = (props) => {
                                                               size={item.size}
                                                               price={item.price}
                                                               count={item.count}
-                                                              location='c_1'
+                                                              location='a_2'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
     />)
 
     return (
         <div>
-            {renderItems(props.montecristoData)}
+            {renderItems(props.cigarCasesData)}
         </div>
     );
 }
 
-export default Montecristo;
+export default CigarCases;

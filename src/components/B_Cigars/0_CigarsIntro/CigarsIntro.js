@@ -7,10 +7,11 @@ const CigarsIntro = () => {
     return (
         <div className={st.main}>
             <img className={st.wallpaper} src={wallpaper} alt='IMG'/>
-            <p className={st.introText}>Premium cigars come in many different shapes, sizes, strength, flavors, and packaging choices. Here at
-                Cigars.com we have a wide variety of brands from some of the best names in the game including
-                Montecristo, Romeo y Julieta, Ashton, Arturo Fuente, Padron, Davidoff, Tatuaje, Drew Estate, Partagas,
-                Macanudo, Punch, Hoyo de Monterrey, Avo, and hundreds more. Whether you are a beginner or a seasoned
+            <p className={st.introText}>Premium cigars come in many different shapes, sizes, strength, flavors, and
+                packaging choices. Here at
+                CigarsStore we have a wide variety of brands from some of the best names in the game including
+                Montecristo, Romeo y Julieta, Arturo Fuente, Tatuaje, Macanudo, and more. Whether you are a beginner or
+                a seasoned
                 aficionado, there's something for every smoker available. This is the ideal spot to fill your humidor
                 with the finest and indulge in luxury cigar smoking at its best!</p>
             <p className={st.secondText}>Go to shopping.</p>
