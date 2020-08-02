@@ -7,7 +7,9 @@ function Header() {
     return (
         <div className={st.main}>
             <div className={st.main1}>
-                <p className={st.logo}>CigarsStore</p>
+                <div className={st.logo}>
+                    <NavLink to='/'>CigarStore</NavLink>
+                </div>
                 <div className={st.cigars}>
                     <NavLink to='/cigars' activeClassName={st.active}>Cigars</NavLink>
                 </div>

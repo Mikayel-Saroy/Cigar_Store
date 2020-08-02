@@ -15,11 +15,11 @@ const CigarillosIntro = () => {
                 light one up for a quick puff, whenever you please.</p>
             <p className={st.secondText}>Go to shopping.</p>
             <div>
-                <ul><NavLink to='/cigars/swishersweets'>- Swisher Sweets</NavLink></ul>
-                <ul><NavLink to='/cigars/djarumfiltered'>- Djarum Filtered</NavLink></ul>
-                <ul><NavLink to='/cigars/whiteowl'>- White Ow</NavLink></ul>
-                <ul><NavLink to='/cigars/cheyennefiltered'>- Cheyenne Filtered</NavLink></ul>
-                <ul><NavLink to='/cigars/villiger'>- Villiger</NavLink></ul>
+                <ul><NavLink to='/cigarillos/swishersweets'>- Swisher Sweets</NavLink></ul>
+                <ul><NavLink to='/cigarillos/djarumfiltered'>- Djarum Filtered</NavLink></ul>
+                <ul><NavLink to='/cigarillos/whiteowl'>- White Owl</NavLink></ul>
+                <ul><NavLink to='/cigarillos/cheyennefiltered'>- Cheyenne Filtered</NavLink></ul>
+                <ul><NavLink to='/cigarillos/villiger'>- Villiger</NavLink></ul>
             </div>
         </div>
     );

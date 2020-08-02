@@ -9,7 +9,7 @@ const CigarsIntro = () => {
             <img className={st.wallpaper} src={wallpaper} alt='IMG'/>
             <p className={st.introText}>Premium cigars come in many different shapes, sizes, strength, flavors, and
                 packaging choices. Here at
-                CigarsStore we have a wide variety of brands from some of the best names in the game including
+                CigarStore we have a wide variety of brands from some of the best names in the game including
                 Montecristo, Romeo y Julieta, Arturo Fuente, Tatuaje, Macanudo, and more. Whether you are a beginner or
                 a seasoned
                 aficionado, there's something for every smoker available. This is the ideal spot to fill your humidor
