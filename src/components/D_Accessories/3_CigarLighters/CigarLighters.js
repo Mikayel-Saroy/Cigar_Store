@@ -14,6 +14,7 @@ const CigarLighters = (props) => {
                                                                     location='a_3'
                                                                     plusButton={props.plusButton}
                                                                     minusButton={props.minusButton}
+                                                                    addToCart={props.addToCart}
     />)
 
     return (

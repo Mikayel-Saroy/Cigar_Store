@@ -14,6 +14,7 @@ const Macanudo = (props) => {
                                                               location='c_3'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

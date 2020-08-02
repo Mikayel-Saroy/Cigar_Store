@@ -14,6 +14,7 @@ const Tatuaje = (props) => {
                                                               location='c_8'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

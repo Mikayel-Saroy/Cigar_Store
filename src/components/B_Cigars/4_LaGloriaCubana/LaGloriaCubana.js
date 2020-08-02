@@ -14,6 +14,7 @@ const LaGloriaCubana = (props) => {
                                                               location='c_4'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

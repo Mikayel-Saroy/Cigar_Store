@@ -14,6 +14,7 @@ const DjarumFiltered = (props) => {
                                                               location='cl_2'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

@@ -1,29 +1,39 @@
 import React from "react";
+import st from './Cart.module.css';
 import CartItems from "./CartItems/CartItems";
-import ShowItems from "../X_Generals/ShowItems/ShowItems";
 
 const Cart = (props) => {
+    const renderCartList = (data) => data.map(item => <CartItems id={item.id}
+                                                                 img={item.img}
+                                                                 name={item.name}
+                                                                 price={item.price}
+                                                                 count={item.count}
+                                                                 totalPrice={item.count * item.price}
+                                                                 removeFromCart={props.removeFromCart}
+        />
+    );
 
-    const renderCartList = (data) => data.map(item => {
-        if (item.isAccessories === false) {
-            return <CartItems id={item.id}
-                              img={item.img}
-                              name={item.name}
-                              amount={item.amount}
-                              color={item.color}
-                              size={item.size}
-                              price={item.price}
-                              count={item.count}
-                              totalPrice={item.count * item.price}
-            />
-        } else {
-            return <p>{item.name} - ACC</p>
-        }
-    })
+    const proceedToCheckout = () => {
+        let text = `Total Items: ${props.cartCheckoutData.totalItems}\nTotal Price: $${props.cartCheckoutData.totalPrice}`;
+        alert(text);
+    };
 
     return (
-        <div>
-            {renderCartList(props.cartData)}
+        <div className={st.main}>
+            <div className={st.list}>
+                {renderCartList(props.cartData)}
+            </div>
+            <div className={st.checkout}>
+                <div className={st.checkoutInner}>
+                    <div className={st.checkoutInfo}>
+                        <p>Total Items: <b>{props.cartCheckoutData.totalItems}</b></p>
+                        <p>Total Price: <b>${props.cartCheckoutData.totalPrice}</b></p>
+                    </div>
+                    <div className={st.checkoutButton}>
+                        <p onClick={() => proceedToCheckout()}>Proceed to Checkout</p>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

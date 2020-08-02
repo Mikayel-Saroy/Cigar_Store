@@ -3,7 +3,7 @@ import st from './Header.module.css';
 import shopping_cart from './shopping_cart.png';
 import {NavLink} from "react-router-dom";
 
-function Header() {
+function Header(props) {
     return (
         <div className={st.main}>
             <div className={st.main1}>
@@ -19,12 +19,12 @@ function Header() {
                 <div className={st.accessories}>
                     <NavLink to='/accessories' activeClassName={st.active}>Accessories</NavLink>
                 </div>
-                <div className={st.cart}>
+                <NavLink className={st.cart} to='/cart'>
                     <img src={shopping_cart} alt='img'/>
                     <div className={st.cartCount}>
-                        <p>0</p>
+                        <p>{props.cartCheckoutData.totalItems}</p>
                     </div>
-                </div>
+                </NavLink>
             </div>
             <div className={st.line}/>
         </div>

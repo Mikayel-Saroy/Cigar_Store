@@ -14,6 +14,7 @@ const ElReydelMundo = (props) => {
                                                               location='c_5'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

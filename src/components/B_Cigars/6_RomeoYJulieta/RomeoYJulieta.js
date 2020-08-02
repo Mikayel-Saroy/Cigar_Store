@@ -14,6 +14,7 @@ const RomeoYJulieta = (props) => {
                                                               location='c_6'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

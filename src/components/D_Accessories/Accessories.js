@@ -31,19 +31,23 @@ const Accessories = (props) => {
                 <Route path='/accessories/cigarcutters'
                        render={() => <CigarCutters cigarCuttersData={props.accessoriesData.cigarCuttersData}
                                                    plusButton={props.plusButton}
-                                                   minusButton={props.minusButton}/>}/>
+                                                   minusButton={props.minusButton}
+                                                   addToCart={props.addToCart}/>}/>
                 <Route path='/accessories/cigarcases'
                        render={() => <CigarCases cigarCasesData={props.accessoriesData.cigarCasesData}
                                                  plusButton={props.plusButton}
-                                                 minusButton={props.minusButton}/>}/>
+                                                 minusButton={props.minusButton}
+                                                 addToCart={props.addToCart}/>}/>
                 <Route path='/accessories/cigarlighters'
                        render={() => <CigarLighters cigarLightersData={props.accessoriesData.cigarLightersData}
                                                     plusButton={props.plusButton}
-                                                    minusButton={props.minusButton}/>}/>
+                                                    minusButton={props.minusButton}
+                                                    addToCart={props.addToCart}/>}/>
                 <Route path='/accessories/cigarashtrays'
                        render={() => <CigarAshtrays cigarAshtraysData={props.accessoriesData.cigarAshtraysData}
                                                     plusButton={props.plusButton}
-                                                    minusButton={props.minusButton}/>}/>
+                                                    minusButton={props.minusButton}
+                                                    addToCart={props.addToCart}/>}/>
             </div>
         </div>
     );

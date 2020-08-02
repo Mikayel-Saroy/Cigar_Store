@@ -114,6 +114,7 @@
     border-radius: 10px;
     height: 30px;
     width: 138px;
+    cursor: pointer;
 }
 
 .addButton p {

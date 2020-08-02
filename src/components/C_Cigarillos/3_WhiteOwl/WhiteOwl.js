@@ -14,6 +14,7 @@ const WhiteOwl = (props) => {
                                                               location='cl_3'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

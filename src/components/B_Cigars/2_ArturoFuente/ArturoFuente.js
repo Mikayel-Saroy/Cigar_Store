@@ -14,6 +14,7 @@ const ArturoFuente = (props) => {
                                                               location='c_2'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

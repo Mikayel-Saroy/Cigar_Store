@@ -14,6 +14,7 @@ const CheyenneFiltered = (props) => {
                                                               location='cl_4'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (

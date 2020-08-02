@@ -71,6 +71,10 @@
     cursor: pointer;
 }
 
+.cartCount p {
+    color: #ffffff;
+}
+
 .cart img {
     height: 30px;
     margin-top: 25px;

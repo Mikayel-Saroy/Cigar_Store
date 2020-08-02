@@ -10,6 +10,9 @@ const AccessoriesItem = (props) => {
     const minusFunction = () => {
         props.minusButton(props.location, props.id);
     };
+    const addButton = () => {
+        props.addToCart(props.location, props.id);
+    };
 
     return (
         <div>
@@ -36,7 +39,7 @@ const AccessoriesItem = (props) => {
                             <img src={plus_sign} alt='IMG'/>
                         </div>
                     </div>
-                    <div className={st.addButton}>
+                    <div className={st.addButton} onClick={addButton}>
                         <p>Add to Cart</p>
                     </div>
                 </div>

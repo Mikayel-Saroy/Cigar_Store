@@ -14,6 +14,7 @@ const HUpmann = (props) => {
                                                               location='c_7'
                                                               plusButton={props.plusButton}
                                                               minusButton={props.minusButton}
+                                                              addToCart={props.addToCart}
     />)
 
     return (
