@@ -13,7 +13,8 @@ function App(props) {
     return (
         <BrowserRouter>
             <div className={st.main}>
-                <Header cartCheckoutData={props.state.cartCheckoutData}/>
+                <Header cartCheckoutData={props.state.cartCheckoutData}
+                        width={props.state.headerData.countWidth}/>
                 <div className={st.content}>
                     <Route render={() => <CigarStore/>} exact path='/'/>
                     <Route render={() => <Cigars cigarsData={props.state.cigarsData}

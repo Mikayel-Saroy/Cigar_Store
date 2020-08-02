@@ -1798,6 +1798,9 @@ let store = {
             totalItems: 0,
             totalPrice: 0,
         },
+        headerData: {
+            countWidth: '30px',
+        }
     },
     _subscriberCall() {
 
@@ -1808,6 +1811,13 @@ let store = {
         for (let key of this._state.cartData) {
             totalItems += key.count;
             totalPrice += (key.price * key.count);
+        }
+        if (totalItems < 10) {
+            this._state.headerData.countWidth = "30px";
+        } else if (totalItems < 100) {
+            this._state.headerData.countWidth = "37px";
+        } else {
+            this._state.headerData.countWidth = "47px";
         }
         this._state.cartCheckoutData.totalItems = totalItems;
         this._state.cartCheckoutData.totalPrice = totalPrice;
@@ -1964,7 +1974,7 @@ let store = {
             currentItem = this._state.accessoriesData.cigarCasesData[id - 1];
         } else if (location === 'a_3') {
             currentItem = this._state.accessoriesData.cigarLightersData[id - 1];
-        } else if (location === 'a_4 Functional Cart ') {
+        } else if (location === 'a_4') {
             currentItem = this._state.accessoriesData.cigarAshtraysData[id - 1];
         }
 
