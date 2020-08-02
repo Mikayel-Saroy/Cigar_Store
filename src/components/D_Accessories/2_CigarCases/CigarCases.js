@@ -1,19 +1,19 @@
 import React from 'react';
-import ShowItems from "../../X_Generals/ShowItems/ShowItems";
+import AccessoriesItem from "../../X_Generals/ShowItems/AccessoriesItem/AccessoriesItem";
 
 
 const CigarCases = (props) => {
-    const renderItems = (data) => data.map(item => <ShowItems id={item.id}
-                                                              img={item.img}
-                                                              name={item.name}
-                                                              amount={item.amount}
-                                                              color={item.color}
-                                                              size={item.size}
-                                                              price={item.price}
-                                                              count={item.count}
-                                                              location='a_2'
-                                                              plusButton={props.plusButton}
-                                                              minusButton={props.minusButton}
+    const renderItems = (data) => data.map(item => <AccessoriesItem id={item.id}
+                                                                    img={item.img}
+                                                                    name={item.name}
+                                                                    amount={item.amount}
+                                                                    color={item.color}
+                                                                    size={item.size}
+                                                                    price={item.price}
+                                                                    count={item.count}
+                                                                    location='a_2'
+                                                                    plusButton={props.plusButton}
+                                                                    minusButton={props.minusButton}
     />)
 
     return (
