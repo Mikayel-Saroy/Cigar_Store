@@ -1,13 +1,10 @@
 import React from 'react';
 import st from './CartItems.module.css';
+import {removeFromCartActionCreator} from "../../../redux/state";
 
 const CartItems = (props) => {
     const removeButton = () => {
-        let action = {
-            type: 'REMOVE-FROM-CART',
-            location: props.location,
-            id: props.id,
-        }
+        let action = removeFromCartActionCreator(props.id);
         props.dispatch(action);
     };
 

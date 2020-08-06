@@ -2176,5 +2176,24 @@ let store = {
     //     this._subscriberCall(this._state);
     // },
 };
-
 export default store;
+
+export const plusButtonActionCreator = (location, id) => ({
+    type: 'PLUS-BUTTON',
+    location: location,
+    id: id,
+});
+export const minusButtonActionCreator = (location, id) => ({
+    type: 'MINUS-BUTTON',
+    location: location,
+    id: id,
+});
+export const addToCartActionCreator = (location, id) => ({
+    type: 'ADD-TO-CART',
+    location: location,
+    id: id,
+});
+export const removeFromCartActionCreator = (id) => ({
+    type: 'REMOVE-FROM-CART',
+    id: id,
+});

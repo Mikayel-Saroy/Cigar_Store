@@ -2,30 +2,19 @@ import React from 'react';
 import st from './../ShowItems.module.css';
 import minus_sign from './../minus_sign.png';
 import plus_sign from './../plus_sign.png';
+import {addToCartActionCreator, minusButtonActionCreator, plusButtonActionCreator} from "../../../../redux/state";
 
 const AccessoriesItem = (props) => {
     const plusFunction = () => {
-        let action = {
-            type: 'PLUS-BUTTON',
-            location: props.location,
-            id: props.id,
-        };
+        let action = plusButtonActionCreator(props.location, props.id);
         props.dispatch(action);
     };
     const minusFunction = () => {
-        let action = {
-            type: 'MINUS-BUTTON',
-            location: props.location,
-            id: props.id,
-        };
+        let action = minusButtonActionCreator(props.location, props.id);
         props.dispatch(action);
     };
     const addButton = () => {
-        let action = {
-            type: 'ADD-TO-CART',
-            location: props.location,
-            id: props.id,
-        };
+        let action = addToCartActionCreator(props.location, props.id);
         props.dispatch(action);
     };
 
