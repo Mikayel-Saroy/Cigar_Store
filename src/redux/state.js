@@ -1830,179 +1830,351 @@ let store = {
         this._subscriberCall = observer;
     },
 
-    plusButton(location, id) {
-        if (location === 'c_1') {
-            this._state.cigarsData.montecristoData[id - 1].count += 1;
-        } else if (location === 'c_2') {
-            this._state.cigarsData.arturoFuenteData[id - 1].count += 1;
-        } else if (location === 'c_3') {
-            this._state.cigarsData.macanudoData[id - 1].count += 1;
-        } else if (location === 'c_4') {
-            this._state.cigarsData.lagloriacubanaData[id - 1].count += 1;
-        } else if (location === 'c_5') {
-            this._state.cigarsData.elreydelmundoData[id - 1].count += 1;
-        } else if (location === 'c_6') {
-            this._state.cigarsData.romeoyjulietaData[id - 1].count += 1;
-        } else if (location === 'c_7') {
-            this._state.cigarsData.hupmannData[id - 1].count += 1;
-        } else if (location === 'c_8') {
-            this._state.cigarsData.tatuajeData[id - 1].count += 1;
-        } else if (location === 'cl_1') {
-            this._state.cigarillosData.swisherSweetsData[id - 1].count += 1;
-        } else if (location === 'cl_2') {
-            this._state.cigarillosData.djarumFilteredData[id - 1].count += 1;
-        } else if (location === 'cl_3') {
-            this._state.cigarillosData.whiteOwlData[id - 1].count += 1;
-        } else if (location === 'cl_4') {
-            this._state.cigarillosData.cheyenneFilteredData[id - 1].count += 1;
-        } else if (location === 'cl_5') {
-            this._state.cigarillosData.villigerData[id - 1].count += 1;
-        } else if (location === 'a_1') {
-            this._state.accessoriesData.cigarCuttersData[id - 1].count += 1;
-        } else if (location === 'a_2') {
-            this._state.accessoriesData.cigarCasesData[id - 1].count += 1;
-        } else if (location === 'a_3') {
-            this._state.accessoriesData.cigarLightersData[id - 1].count += 1;
-        } else if (location === 'a_4') {
-            this._state.accessoriesData.cigarAshtraysData[id - 1].count += 1;
-        }
-        this._subscriberCall(this._state);
-    },
-    minusButton(location, id) {
-        if (location === 'c_1') {
-            if (this._state.cigarsData.montecristoData[id - 1].count > 1) {
-                this._state.cigarsData.montecristoData[id - 1].count -= 1;
+    dispatch(action) {
+        if (action.type === 'PLUS-BUTTON') {
+            if (action.location === 'c_1') {
+                this._state.cigarsData.montecristoData[action.id - 1].count += 1;
+            } else if (action.location === 'c_2') {
+                this._state.cigarsData.arturoFuenteData[action.id - 1].count += 1;
+            } else if (action.location === 'c_3') {
+                this._state.cigarsData.macanudoData[action.id - 1].count += 1;
+            } else if (action.location === 'c_4') {
+                this._state.cigarsData.lagloriacubanaData[action.id - 1].count += 1;
+            } else if (action.location === 'c_5') {
+                this._state.cigarsData.elreydelmundoData[action.id - 1].count += 1;
+            } else if (action.location === 'c_6') {
+                this._state.cigarsData.romeoyjulietaData[action.id - 1].count += 1;
+            } else if (action.location === 'c_7') {
+                this._state.cigarsData.hupmannData[action.id - 1].count += 1;
+            } else if (action.location === 'c_8') {
+                this._state.cigarsData.tatuajeData[action.id - 1].count += 1;
+            } else if (action.location === 'cl_1') {
+                this._state.cigarillosData.swisherSweetsData[action.id - 1].count += 1;
+            } else if (action.location === 'cl_2') {
+                this._state.cigarillosData.djarumFilteredData[action.id - 1].count += 1;
+            } else if (action.location === 'cl_3') {
+                this._state.cigarillosData.whiteOwlData[action.id - 1].count += 1;
+            } else if (action.location === 'cl_4') {
+                this._state.cigarillosData.cheyenneFilteredData[action.id - 1].count += 1;
+            } else if (action.location === 'cl_5') {
+                this._state.cigarillosData.villigerData[action.id - 1].count += 1;
+            } else if (action.location === 'a_1') {
+                this._state.accessoriesData.cigarCuttersData[action.id - 1].count += 1;
+            } else if (action.location === 'a_2') {
+                this._state.accessoriesData.cigarCasesData[action.id - 1].count += 1;
+            } else if (action.location === 'a_3') {
+                this._state.accessoriesData.cigarLightersData[action.id - 1].count += 1;
+            } else if (action.location === 'a_4') {
+                this._state.accessoriesData.cigarAshtraysData[action.id - 1].count += 1;
             }
-        } else if (location === 'c_2') {
-            if (this._state.cigarsData.arturoFuenteData[id - 1].count > 1) {
-                this._state.cigarsData.arturoFuenteData[id - 1].count -= 1;
+            this._subscriberCall(this._state);
+        } else if (action.type === 'MINUS-BUTTON') {
+            if (action.location === 'c_1') {
+                if (this._state.cigarsData.montecristoData[action.id - 1].count > 1) {
+                    this._state.cigarsData.montecristoData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_2') {
+                if (this._state.cigarsData.arturoFuenteData[action.id - 1].count > 1) {
+                    this._state.cigarsData.arturoFuenteData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_3') {
+                if (this._state.cigarsData.macanudoData[action.id - 1].count > 1) {
+                    this._state.cigarsData.macanudoData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_4') {
+                if (this._state.cigarsData.lagloriacubanaData[action.id - 1].count > 1) {
+                    this._state.cigarsData.lagloriacubanaData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_5') {
+                if (this._state.cigarsData.elreydelmundoData[action.id - 1].count > 1) {
+                    this._state.cigarsData.elreydelmundoData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_6') {
+                if (this._state.cigarsData.romeoyjulietaData[action.id - 1].count > 1) {
+                    this._state.cigarsData.romeoyjulietaData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_7') {
+                if (this._state.cigarsData.hupmannData[action.id - 1].count > 1) {
+                    this._state.cigarsData.hupmannData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'c_8') {
+                if (this._state.cigarsData.tatuajeData[action.id - 1].count > 1) {
+                    this._state.cigarsData.tatuajeData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'cl_1') {
+                if (this._state.cigarillosData.swisherSweetsData[action.id - 1].count > 1) {
+                    this._state.cigarillosData.swisherSweetsData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'cl_2') {
+                if (this._state.cigarillosData.djarumFilteredData[action.id - 1].count > 1) {
+                    this._state.cigarillosData.djarumFilteredData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'cl_3') {
+                if (this._state.cigarillosData.whiteOwlData[action.id - 1].count > 1) {
+                    this._state.cigarillosData.whiteOwlData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'cl_4') {
+                if (this._state.cigarillosData.cheyenneFilteredData[action.id - 1].count > 1) {
+                    this._state.cigarillosData.cheyenneFilteredData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'cl_5') {
+                if (this._state.cigarillosData.villigerData[action.id - 1].count > 1) {
+                    this._state.cigarillosData.villigerData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'a_1') {
+                if (this._state.accessoriesData.cigarCuttersData[action.id - 1].count > 1) {
+                    this._state.accessoriesData.cigarCuttersData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'a_2') {
+                if (this._state.accessoriesData.cigarCasesData[action.id - 1].count > 1) {
+                    this._state.accessoriesData.cigarCasesData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'a_3') {
+                if (this._state.accessoriesData.cigarLightersData[action.id - 1].count > 1) {
+                    this._state.accessoriesData.cigarLightersData[action.id - 1].count -= 1;
+                }
+            } else if (action.location === 'a_4') {
+                if (this._state.accessoriesData.cigarAshtraysData[action.id - 1].count > 1) {
+                    this._state.accessoriesData.cigarAshtraysData[action.id - 1].count -= 1;
+                }
             }
-        } else if (location === 'c_3') {
-            if (this._state.cigarsData.macanudoData[id - 1].count > 1) {
-                this._state.cigarsData.macanudoData[id - 1].count -= 1;
+            this._subscriberCall(this._state);
+        } else if (action.type === 'ADD-TO-CART') {
+            let currentItem = {};
+            if (action.location === 'c_1') {
+                currentItem = this._state.cigarsData.montecristoData[action.id - 1];
+            } else if (action.location === 'c_2') {
+                currentItem = this._state.cigarsData.arturoFuenteData[action.id - 1];
+            } else if (action.location === 'c_3') {
+                currentItem = this._state.cigarsData.macanudoData[action.id - 1];
+            } else if (action.location === 'c_4') {
+                currentItem = this._state.cigarsData.lagloriacubanaData[action.id - 1];
+            } else if (action.location === 'c_5') {
+                currentItem = this._state.cigarsData.elreydelmundoData[action.id - 1];
+            } else if (action.location === 'c_6') {
+                currentItem = this._state.cigarsData.romeoyjulietaData[action.id - 1];
+            } else if (action.location === 'c_7') {
+                currentItem = this._state.cigarsData.hupmannData[action.id - 1];
+            } else if (action.location === 'c_8') {
+                currentItem = this._state.cigarsData.tatuajeData[action.id - 1];
+            } else if (action.location === 'cl_1') {
+                currentItem = this._state.cigarillosData.swisherSweetsData[action.id - 1];
+            } else if (action.location === 'cl_2') {
+                currentItem = this._state.cigarillosData.djarumFilteredData[action.id - 1];
+            } else if (action.location === 'cl_3') {
+                currentItem = this._state.cigarillosData.whiteOwlData[action.id - 1];
+            } else if (action.location === 'cl_4') {
+                currentItem = this._state.cigarillosData.cheyenneFilteredData[action.id - 1];
+            } else if (action.location === 'cl_5') {
+                currentItem = this._state.cigarillosData.villigerData[action.id - 1];
+            } else if (action.location === 'a_1') {
+                currentItem = this._state.accessoriesData.cigarCuttersData[action.id - 1];
+            } else if (action.location === 'a_2') {
+                currentItem = this._state.accessoriesData.cigarCasesData[action.id - 1];
+            } else if (action.location === 'a_3') {
+                currentItem = this._state.accessoriesData.cigarLightersData[action.id - 1];
+            } else if (action.location === 'a_4') {
+                currentItem = this._state.accessoriesData.cigarAshtraysData[action.id - 1];
             }
-        } else if (location === 'c_4') {
-            if (this._state.cigarsData.lagloriacubanaData[id - 1].count > 1) {
-                this._state.cigarsData.lagloriacubanaData[id - 1].count -= 1;
-            }
-        } else if (location === 'c_5') {
-            if (this._state.cigarsData.elreydelmundoData[id - 1].count > 1) {
-                this._state.cigarsData.elreydelmundoData[id - 1].count -= 1;
-            }
-        } else if (location === 'c_6') {
-            if (this._state.cigarsData.romeoyjulietaData[id - 1].count > 1) {
-                this._state.cigarsData.romeoyjulietaData[id - 1].count -= 1;
-            }
-        } else if (location === 'c_7') {
-            if (this._state.cigarsData.hupmannData[id - 1].count > 1) {
-                this._state.cigarsData.hupmannData[id - 1].count -= 1;
-            }
-        } else if (location === 'c_8') {
-            if (this._state.cigarsData.tatuajeData[id - 1].count > 1) {
-                this._state.cigarsData.tatuajeData[id - 1].count -= 1;
-            }
-        } else if (location === 'cl_1') {
-            if (this._state.cigarillosData.swisherSweetsData[id - 1].count > 1) {
-                this._state.cigarillosData.swisherSweetsData[id - 1].count -= 1;
-            }
-        } else if (location === 'cl_2') {
-            if (this._state.cigarillosData.djarumFilteredData[id - 1].count > 1) {
-                this._state.cigarillosData.djarumFilteredData[id - 1].count -= 1;
-            }
-        } else if (location === 'cl_3') {
-            if (this._state.cigarillosData.whiteOwlData[id - 1].count > 1) {
-                this._state.cigarillosData.whiteOwlData[id - 1].count -= 1;
-            }
-        } else if (location === 'cl_4') {
-            if (this._state.cigarillosData.cheyenneFilteredData[id - 1].count > 1) {
-                this._state.cigarillosData.cheyenneFilteredData[id - 1].count -= 1;
-            }
-        } else if (location === 'cl_5') {
-            if (this._state.cigarillosData.villigerData[id - 1].count > 1) {
-                this._state.cigarillosData.villigerData[id - 1].count -= 1;
-            }
-        } else if (location === 'a_1') {
-            if (this._state.accessoriesData.cigarCuttersData[id - 1].count > 1) {
-                this._state.accessoriesData.cigarCuttersData[id - 1].count -= 1;
-            }
-        } else if (location === 'a_2') {
-            if (this._state.accessoriesData.cigarCasesData[id - 1].count > 1) {
-                this._state.accessoriesData.cigarCasesData[id - 1].count -= 1;
-            }
-        } else if (location === 'a_3') {
-            if (this._state.accessoriesData.cigarLightersData[id - 1].count > 1) {
-                this._state.accessoriesData.cigarLightersData[id - 1].count -= 1;
-            }
-        } else if (location === 'a_4') {
-            if (this._state.accessoriesData.cigarAshtraysData[id - 1].count > 1) {
-                this._state.accessoriesData.cigarAshtraysData[id - 1].count -= 1;
-            }
-        }
-        this._subscriberCall(this._state);
-    },
-    addToCart(location, id) {
-        let currentItem = {};
-        if (location === 'c_1') {
-            currentItem = this._state.cigarsData.montecristoData[id - 1];
-        } else if (location === 'c_2') {
-            currentItem = this._state.cigarsData.arturoFuenteData[id - 1];
-        } else if (location === 'c_3') {
-            currentItem = this._state.cigarsData.macanudoData[id - 1];
-        } else if (location === 'c_4') {
-            currentItem = this._state.cigarsData.lagloriacubanaData[id - 1];
-        } else if (location === 'c_5') {
-            currentItem = this._state.cigarsData.elreydelmundoData[id - 1];
-        } else if (location === 'c_6') {
-            currentItem = this._state.cigarsData.romeoyjulietaData[id - 1];
-        } else if (location === 'c_7') {
-            currentItem = this._state.cigarsData.hupmannData[id - 1];
-        } else if (location === 'c_8') {
-            currentItem = this._state.cigarsData.tatuajeData[id - 1];
-        } else if (location === 'cl_1') {
-            currentItem = this._state.cigarillosData.swisherSweetsData[id - 1];
-        } else if (location === 'cl_2') {
-            currentItem = this._state.cigarillosData.djarumFilteredData[id - 1];
-        } else if (location === 'cl_3') {
-            currentItem = this._state.cigarillosData.whiteOwlData[id - 1];
-        } else if (location === 'cl_4') {
-            currentItem = this._state.cigarillosData.cheyenneFilteredData[id - 1];
-        } else if (location === 'cl_5') {
-            currentItem = this._state.cigarillosData.villigerData[id - 1];
-        } else if (location === 'a_1') {
-            currentItem = this._state.accessoriesData.cigarCuttersData[id - 1];
-        } else if (location === 'a_2') {
-            currentItem = this._state.accessoriesData.cigarCasesData[id - 1];
-        } else if (location === 'a_3') {
-            currentItem = this._state.accessoriesData.cigarLightersData[id - 1];
-        } else if (location === 'a_4') {
-            currentItem = this._state.accessoriesData.cigarAshtraysData[id - 1];
-        }
 
-        let newItem = {
-            id: this._state.cartCheckoutData.uniqueID,
-            img: currentItem.img,
-            name: currentItem.name,
-            price: currentItem.price,
-            count: currentItem.count,
-        };
-        this._state.cartCheckoutData.uniqueID += 1;
-        this._state.cartData.unshift(newItem);
+            let newItem = {
+                id: this._state.cartCheckoutData.uniqueID,
+                img: currentItem.img,
+                name: currentItem.name,
+                price: currentItem.price,
+                count: currentItem.count,
+            };
+            this._state.cartCheckoutData.uniqueID += 1;
+            this._state.cartData.unshift(newItem);
 
-        this._reCountCartTotals();
-        this._subscriberCall(this._state);
-    },
-    removeFromCart(id) {
-        let newCartData = [];
-        for (let i = 0; i < this._state.cartData.length; i++) {
-            if (this._state.cartData[i].id !== id) {
-                newCartData.push(this._state.cartData[i]);
+            this._reCountCartTotals();
+            this._subscriberCall(this._state);
+        } else if (action.type === 'REMOVE-FROM-CART') {
+            let newCartData = [];
+            for (let i = 0; i < this._state.cartData.length; i++) {
+                if (this._state.cartData[i].id !== action.id) {
+                    newCartData.push(this._state.cartData[i]);
+                }
             }
-        }
-        this._state.cartData = newCartData;
+            this._state.cartData = newCartData;
 
-        this._reCountCartTotals();
-        this._subscriberCall(this._state);
+            this._reCountCartTotals();
+            this._subscriberCall(this._state);
+        }
     },
+    // plusButton(location, id) {
+    //     if (location === 'c_1') {
+    //         this._state.cigarsData.montecristoData[id - 1].count += 1;
+    //     } else if (location === 'c_2') {
+    //         this._state.cigarsData.arturoFuenteData[id - 1].count += 1;
+    //     } else if (location === 'c_3') {
+    //         this._state.cigarsData.macanudoData[id - 1].count += 1;
+    //     } else if (location === 'c_4') {
+    //         this._state.cigarsData.lagloriacubanaData[id - 1].count += 1;
+    //     } else if (location === 'c_5') {
+    //         this._state.cigarsData.elreydelmundoData[id - 1].count += 1;
+    //     } else if (location === 'c_6') {
+    //         this._state.cigarsData.romeoyjulietaData[id - 1].count += 1;
+    //     } else if (location === 'c_7') {
+    //         this._state.cigarsData.hupmannData[id - 1].count += 1;
+    //     } else if (location === 'c_8') {
+    //         this._state.cigarsData.tatuajeData[id - 1].count += 1;
+    //     } else if (location === 'cl_1') {
+    //         this._state.cigarillosData.swisherSweetsData[id - 1].count += 1;
+    //     } else if (location === 'cl_2') {
+    //         this._state.cigarillosData.djarumFilteredData[id - 1].count += 1;
+    //     } else if (location === 'cl_3') {
+    //         this._state.cigarillosData.whiteOwlData[id - 1].count += 1;
+    //     } else if (location === 'cl_4') {
+    //         this._state.cigarillosData.cheyenneFilteredData[id - 1].count += 1;
+    //     } else if (location === 'cl_5') {
+    //         this._state.cigarillosData.villigerData[id - 1].count += 1;
+    //     } else if (location === 'a_1') {
+    //         this._state.accessoriesData.cigarCuttersData[id - 1].count += 1;
+    //     } else if (location === 'a_2') {
+    //         this._state.accessoriesData.cigarCasesData[id - 1].count += 1;
+    //     } else if (location === 'a_3') {
+    //         this._state.accessoriesData.cigarLightersData[id - 1].count += 1;
+    //     } else if (location === 'a_4') {
+    //         this._state.accessoriesData.cigarAshtraysData[id - 1].count += 1;
+    //     }
+    //     this._subscriberCall(this._state);
+    // },
+    // minusButton(location, id) {
+    //     if (location === 'c_1') {
+    //         if (this._state.cigarsData.montecristoData[id - 1].count > 1) {
+    //             this._state.cigarsData.montecristoData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_2') {
+    //         if (this._state.cigarsData.arturoFuenteData[id - 1].count > 1) {
+    //             this._state.cigarsData.arturoFuenteData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_3') {
+    //         if (this._state.cigarsData.macanudoData[id - 1].count > 1) {
+    //             this._state.cigarsData.macanudoData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_4') {
+    //         if (this._state.cigarsData.lagloriacubanaData[id - 1].count > 1) {
+    //             this._state.cigarsData.lagloriacubanaData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_5') {
+    //         if (this._state.cigarsData.elreydelmundoData[id - 1].count > 1) {
+    //             this._state.cigarsData.elreydelmundoData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_6') {
+    //         if (this._state.cigarsData.romeoyjulietaData[id - 1].count > 1) {
+    //             this._state.cigarsData.romeoyjulietaData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_7') {
+    //         if (this._state.cigarsData.hupmannData[id - 1].count > 1) {
+    //             this._state.cigarsData.hupmannData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'c_8') {
+    //         if (this._state.cigarsData.tatuajeData[id - 1].count > 1) {
+    //             this._state.cigarsData.tatuajeData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'cl_1') {
+    //         if (this._state.cigarillosData.swisherSweetsData[id - 1].count > 1) {
+    //             this._state.cigarillosData.swisherSweetsData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'cl_2') {
+    //         if (this._state.cigarillosData.djarumFilteredData[id - 1].count > 1) {
+    //             this._state.cigarillosData.djarumFilteredData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'cl_3') {
+    //         if (this._state.cigarillosData.whiteOwlData[id - 1].count > 1) {
+    //             this._state.cigarillosData.whiteOwlData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'cl_4') {
+    //         if (this._state.cigarillosData.cheyenneFilteredData[id - 1].count > 1) {
+    //             this._state.cigarillosData.cheyenneFilteredData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'cl_5') {
+    //         if (this._state.cigarillosData.villigerData[id - 1].count > 1) {
+    //             this._state.cigarillosData.villigerData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'a_1') {
+    //         if (this._state.accessoriesData.cigarCuttersData[id - 1].count > 1) {
+    //             this._state.accessoriesData.cigarCuttersData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'a_2') {
+    //         if (this._state.accessoriesData.cigarCasesData[id - 1].count > 1) {
+    //             this._state.accessoriesData.cigarCasesData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'a_3') {
+    //         if (this._state.accessoriesData.cigarLightersData[id - 1].count > 1) {
+    //             this._state.accessoriesData.cigarLightersData[id - 1].count -= 1;
+    //         }
+    //     } else if (location === 'a_4') {
+    //         if (this._state.accessoriesData.cigarAshtraysData[id - 1].count > 1) {
+    //             this._state.accessoriesData.cigarAshtraysData[id - 1].count -= 1;
+    //         }
+    //     }
+    //     this._subscriberCall(this._state);
+    // },
+    // addToCart(location, id) {
+    //     let currentItem = {};
+    //     if (location === 'c_1') {
+    //         currentItem = this._state.cigarsData.montecristoData[id - 1];
+    //     } else if (location === 'c_2') {
+    //         currentItem = this._state.cigarsData.arturoFuenteData[id - 1];
+    //     } else if (location === 'c_3') {
+    //         currentItem = this._state.cigarsData.macanudoData[id - 1];
+    //     } else if (location === 'c_4') {
+    //         currentItem = this._state.cigarsData.lagloriacubanaData[id - 1];
+    //     } else if (location === 'c_5') {
+    //         currentItem = this._state.cigarsData.elreydelmundoData[id - 1];
+    //     } else if (location === 'c_6') {
+    //         currentItem = this._state.cigarsData.romeoyjulietaData[id - 1];
+    //     } else if (location === 'c_7') {
+    //         currentItem = this._state.cigarsData.hupmannData[id - 1];
+    //     } else if (location === 'c_8') {
+    //         currentItem = this._state.cigarsData.tatuajeData[id - 1];
+    //     } else if (location === 'cl_1') {
+    //         currentItem = this._state.cigarillosData.swisherSweetsData[id - 1];
+    //     } else if (location === 'cl_2') {
+    //         currentItem = this._state.cigarillosData.djarumFilteredData[id - 1];
+    //     } else if (location === 'cl_3') {
+    //         currentItem = this._state.cigarillosData.whiteOwlData[id - 1];
+    //     } else if (location === 'cl_4') {
+    //         currentItem = this._state.cigarillosData.cheyenneFilteredData[id - 1];
+    //     } else if (location === 'cl_5') {
+    //         currentItem = this._state.cigarillosData.villigerData[id - 1];
+    //     } else if (location === 'a_1') {
+    //         currentItem = this._state.accessoriesData.cigarCuttersData[id - 1];
+    //     } else if (location === 'a_2') {
+    //         currentItem = this._state.accessoriesData.cigarCasesData[id - 1];
+    //     } else if (location === 'a_3') {
+    //         currentItem = this._state.accessoriesData.cigarLightersData[id - 1];
+    //     } else if (location === 'a_4') {
+    //         currentItem = this._state.accessoriesData.cigarAshtraysData[id - 1];
+    //     }
+    //
+    //     let newItem = {
+    //         id: this._state.cartCheckoutData.uniqueID,
+    //         img: currentItem.img,
+    //         name: currentItem.name,
+    //         price: currentItem.price,
+    //         count: currentItem.count,
+    //     };
+    //     this._state.cartCheckoutData.uniqueID += 1;
+    //     this._state.cartData.unshift(newItem);
+    //
+    //     this._reCountCartTotals();
+    //     this._subscriberCall(this._state);
+    // },
+    // removeFromCart(id) {
+    //     let newCartData = [];
+    //     for (let i = 0; i < this._state.cartData.length; i++) {
+    //         if (this._state.cartData[i].id !== id) {
+    //             newCartData.push(this._state.cartData[i]);
+    //         }
+    //     }
+    //     this._state.cartData = newCartData;
+    //
+    //     this._reCountCartTotals();
+    //     this._subscriberCall(this._state);
+    // },
 };
 
 export default store;

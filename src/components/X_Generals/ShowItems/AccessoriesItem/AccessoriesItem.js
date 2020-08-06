@@ -5,13 +5,28 @@ import plus_sign from './../plus_sign.png';
 
 const AccessoriesItem = (props) => {
     const plusFunction = () => {
-        props.plusButton(props.location, props.id);
+        let action = {
+            type: 'PLUS-BUTTON',
+            location: props.location,
+            id: props.id,
+        };
+        props.dispatch(action);
     };
     const minusFunction = () => {
-        props.minusButton(props.location, props.id);
+        let action = {
+            type: 'MINUS-BUTTON',
+            location: props.location,
+            id: props.id,
+        };
+        props.dispatch(action);
     };
     const addButton = () => {
-        props.addToCart(props.location, props.id);
+        let action = {
+            type: 'ADD-TO-CART',
+            location: props.location,
+            id: props.id,
+        };
+        props.dispatch(action);
     };
 
     return (

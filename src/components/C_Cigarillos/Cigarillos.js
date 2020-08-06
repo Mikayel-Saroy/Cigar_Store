@@ -35,29 +35,19 @@ const Cigarillos = (props) => {
                 <Route render={() => <CigarillosIntro/>} exact path='/cigarillos'/>
                 <Route path='/cigarillos/swishersweets'
                        render={() => <SwisherSweets swisherSweetsData={props.cigarillosData.swisherSweetsData}
-                                                    plusButton={props.plusButton}
-                                                    minusButton={props.minusButton}
-                                                    addToCart={props.addToCart}/>}/>
+                                                    dispatch={props.dispatch}/>}/>
                 <Route path='/cigarillos/djarumfiltered'
                        render={() => <DjarumFiltered djarumFilteredData={props.cigarillosData.djarumFilteredData}
-                                                     plusButton={props.plusButton}
-                                                     minusButton={props.minusButton}
-                                                     addToCart={props.addToCart}/>}/>
+                                                     dispatch={props.dispatch}/>}/>
                 <Route path='/cigarillos/whiteowl'
                        render={() => <WhiteOwl whiteOwlData={props.cigarillosData.whiteOwlData}
-                                               plusButton={props.plusButton}
-                                               minusButton={props.minusButton}
-                                               addToCart={props.addToCart}/>}/>
+                                               dispatch={props.dispatch}/>}/>
                 <Route path='/cigarillos/cheyennefiltered'
                        render={() => <CheyenneFiltered cheyenneFilteredData={props.cigarillosData.cheyenneFilteredData}
-                                                       plusButton={props.plusButton}
-                                                       minusButton={props.minusButton}
-                                                       addToCart={props.addToCart}/>}/>
+                                                       dispatch={props.dispatch}/>}/>
                 <Route path='/cigarillos/villiger'
                        render={() => <Villiger villigerData={props.cigarillosData.villigerData}
-                                               plusButton={props.plusButton}
-                                               minusButton={props.minusButton}
-                                               addToCart={props.addToCart}/>}/>
+                                               dispatch={props.dispatch}/>}/>
             </div>
         </div>
     );

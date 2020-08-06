@@ -12,9 +12,7 @@ const ElReydelMundo = (props) => {
                                                               price={item.price}
                                                               count={item.count}
                                                               location='c_5'
-                                                              plusButton={props.plusButton}
-                                                              minusButton={props.minusButton}
-                                                              addToCart={props.addToCart}
+                                                              dispatch={props.dispatch}
     />)
 
     return (

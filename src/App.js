@@ -18,20 +18,14 @@ function App(props) {
                 <div className={st.content}>
                     <Route render={() => <CigarStore/>} exact path='/'/>
                     <Route render={() => <Cigars cigarsData={props.state.cigarsData}
-                                                 plusButton={props.plusButton}
-                                                 minusButton={props.minusButton}
-                                                 addToCart={props.addToCart}/>} path='/cigars'/>
+                                                 dispatch={props.dispatch}/>} path='/cigars'/>
                     <Route render={() => <Cigarillos cigarillosData={props.state.cigarillosData}
-                                                     plusButton={props.plusButton}
-                                                     minusButton={props.minusButton}
-                                                     addToCart={props.addToCart}/>} path='/cigarillos'/>
+                                                     dispatch={props.dispatch}/>} path='/cigarillos'/>
                     <Route render={() => <Accessories accessoriesData={props.state.accessoriesData}
-                                                      plusButton={props.plusButton}
-                                                      minusButton={props.minusButton}
-                                                      addToCart={props.addToCart}/>} path='/accessories'/>
+                                                      dispatch={props.dispatch}/>} path='/accessories'/>
                     <Route render={() => <Cart cartData={props.state.cartData}
                                                cartCheckoutData={props.state.cartCheckoutData}
-                                               removeFromCart={props.removeFromCart}/>} path='/cart'/>
+                                               dispatch={props.dispatch}/>} path='/cart'/>
                 </div>
             </div>
         </BrowserRouter>

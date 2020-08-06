@@ -7,10 +7,11 @@ import store from "./redux/state";
 
 let rerenderEntireTree = (data) => {
     ReactDOM.render(<App state={data}
-                         plusButton={store.plusButton.bind(store)}
-                         minusButton={store.minusButton.bind(store)}
-                         addToCart={store.addToCart.bind(store)}
-                         removeFromCart={store.removeFromCart.bind(store)}
+                         dispatch={store.dispatch.bind(store)}
+                         // plusButton={store.plusButton.bind(store)}
+                         // minusButton={store.minusButton.bind(store)}
+                         // addToCart={store.addToCart.bind(store)}
+                         // removeFromCart={store.removeFromCart.bind(store)}
     />, document.getElementById('root'));
 };
 rerenderEntireTree(store.getState());

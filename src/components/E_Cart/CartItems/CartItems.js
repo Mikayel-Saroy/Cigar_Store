@@ -2,9 +2,13 @@ import React from 'react';
 import st from './CartItems.module.css';
 
 const CartItems = (props) => {
-
     const removeButton = () => {
-        props.removeFromCart(props.id);
+        let action = {
+            type: 'REMOVE-FROM-CART',
+            location: props.location,
+            id: props.id,
+        }
+        props.dispatch(action);
     };
 
     return (

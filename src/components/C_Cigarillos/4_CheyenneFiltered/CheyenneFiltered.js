@@ -12,9 +12,7 @@ const CheyenneFiltered = (props) => {
                                                               price={item.price}
                                                               count={item.count}
                                                               location='cl_4'
-                                                              plusButton={props.plusButton}
-                                                              minusButton={props.minusButton}
-                                                              addToCart={props.addToCart}
+                                                              dispatch={props.dispatch}
     />)
 
     return (

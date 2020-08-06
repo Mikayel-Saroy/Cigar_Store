@@ -30,24 +30,16 @@ const Accessories = (props) => {
                 <Route render={() => <AccessoriesIntro/>} exact path='/accessories'/>
                 <Route path='/accessories/cigarcutters'
                        render={() => <CigarCutters cigarCuttersData={props.accessoriesData.cigarCuttersData}
-                                                   plusButton={props.plusButton}
-                                                   minusButton={props.minusButton}
-                                                   addToCart={props.addToCart}/>}/>
+                                                   dispatch={props.dispatch}/>}/>
                 <Route path='/accessories/cigarcases'
                        render={() => <CigarCases cigarCasesData={props.accessoriesData.cigarCasesData}
-                                                 plusButton={props.plusButton}
-                                                 minusButton={props.minusButton}
-                                                 addToCart={props.addToCart}/>}/>
+                                                 dispatch={props.dispatch}/>}/>
                 <Route path='/accessories/cigarlighters'
                        render={() => <CigarLighters cigarLightersData={props.accessoriesData.cigarLightersData}
-                                                    plusButton={props.plusButton}
-                                                    minusButton={props.minusButton}
-                                                    addToCart={props.addToCart}/>}/>
+                                                    dispatch={props.dispatch}/>}/>
                 <Route path='/accessories/cigarashtrays'
                        render={() => <CigarAshtrays cigarAshtraysData={props.accessoriesData.cigarAshtraysData}
-                                                    plusButton={props.plusButton}
-                                                    minusButton={props.minusButton}
-                                                    addToCart={props.addToCart}/>}/>
+                                                    dispatch={props.dispatch}/>}/>
             </div>
         </div>
     );
