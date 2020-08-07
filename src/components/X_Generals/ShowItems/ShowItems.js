@@ -2,7 +2,7 @@ import React from 'react';
 import st from './ShowItems.module.css';
 import minus_sign from './minus_sign.png';
 import plus_sign from './plus_sign.png';
-import {addToCartActionCreator, minusButtonActionCreator, plusButtonActionCreator} from "../../../redux/state";
+import {addToCartActionCreator, minusButtonActionCreator, plusButtonActionCreator} from "../../../redux/general-reducer";
 
 const ShowItems = (props) => {
     const plusFunction = () => {
