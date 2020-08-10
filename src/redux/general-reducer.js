@@ -218,3 +218,7 @@ export const removeFromCartActionCreator = (id) => ({
     type: 'REMOVE-FROM-CART',
     id: id,
 });
+
+
+
+

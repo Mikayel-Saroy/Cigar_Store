@@ -9,8 +9,7 @@ const Cart = (props) => {
                                                                  price={item.price}
                                                                  count={item.count}
                                                                  totalPrice={item.count * item.price}
-                                                                 dispatch={props.dispatch}
-        />
+                                                                 dispatch={props.dispatch}/>
     );
 
     const proceedToCheckout = () => {

@@ -13,7 +13,7 @@ const Montecristo = (props) => {
                                                               count={item.count}
                                                               location='c_1'
                                                               dispatch={props.dispatch}
-    />)
+    />);
 
     return (
         <div>
