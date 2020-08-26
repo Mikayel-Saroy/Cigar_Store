@@ -13,6 +13,7 @@ const ArturoFuente = (props) => {
                                                               count={item.count}
                                                               location='c_2'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (

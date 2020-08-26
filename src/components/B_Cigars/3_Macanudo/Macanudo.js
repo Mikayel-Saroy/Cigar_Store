@@ -13,6 +13,7 @@ const Macanudo = (props) => {
                                                               count={item.count}
                                                               location='c_3'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (

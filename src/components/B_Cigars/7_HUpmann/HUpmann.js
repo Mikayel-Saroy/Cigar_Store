@@ -13,6 +13,7 @@ const HUpmann = (props) => {
                                                               count={item.count}
                                                               location='c_7'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (

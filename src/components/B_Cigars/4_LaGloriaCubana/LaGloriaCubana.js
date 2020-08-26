@@ -13,6 +13,7 @@ const LaGloriaCubana = (props) => {
                                                               count={item.count}
                                                               location='c_4'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (

@@ -13,6 +13,7 @@ const RomeoYJulieta = (props) => {
                                                               count={item.count}
                                                               location='c_6'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (

@@ -13,6 +13,7 @@ const Tatuaje = (props) => {
                                                               count={item.count}
                                                               location='c_8'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />);
 
     return (

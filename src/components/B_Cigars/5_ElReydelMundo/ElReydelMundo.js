@@ -13,6 +13,7 @@ const ElReydelMundo = (props) => {
                                                               count={item.count}
                                                               location='c_5'
                                                               dispatch={props.dispatch}
+                                                              key={props.id}
     />)
 
     return (
